@@ -5,6 +5,7 @@ RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y nodejs \
     npm
 COPY . .
+RUN npx prisma generate
 RUN npm run build
 RUN npm install -g next
 EXPOSE 3000
