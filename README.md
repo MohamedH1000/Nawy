@@ -46,14 +46,15 @@ https://nawy.vercel.app/
 
 ## API endpoints
 
-This project don't need endpoints to be used since we use server actions in NextJS that create
+This project fetches endpoints from server actions in NextJS that create
 functions in NextJS server and you can import it directly in the client and use it and thats more secure.
 
-so I have create two functions in lib folder in the main directory:
+so I have create three functions in lib folder that represents 3 API endpoints in the main directory:
 
 1. for adding the apartment to the listing page, the Images and location values are not required in
    the apartment details but the remaining fields are required.
-2. a function for get all the listings from the database
+2. a function for get all the listings from the database.
+3. a function for get a specific listing by its ID and display its details in the detail page.
 
 Prisma ORM is used to interact with the database for post and get functions.
 
