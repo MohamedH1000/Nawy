@@ -41,15 +41,36 @@ const page = async ({ params }: any) => {
         ))}
       </ImageList>
       <div className="mt-5">
-        <h1 className="text-[#1e4164] text-xl font-bold">{listing?.title}</h1>
-        <h1 className="text-xl font-bold mt-5">Description:</h1>
-        <p className="text-[gray] text-sm font-semibold">
-          {listing?.description}
-        </p>
-        <p className="text-[gray] text-xs font-semibold mt-5">
-          Price start from
-        </p>
-        <p className="text-lg font-bold">{listing?.price} &nbsp;EGP</p>
+        <div
+          className="flex justify-start items-center flex-wrap gap-10 
+        max-md:gap-5 max-sm:flex-col max-sm:items-start"
+        >
+          <h1 className="text-[#1e4164] text-xl font-bold">{listing?.title}</h1>
+          <div>
+            <h1 className="text-xl font-bold mt-5">Description:</h1>
+            <p className="text-[gray] text-sm font-semibold">
+              {listing?.description}
+            </p>
+          </div>
+          <div className="static">
+            <h1 className="text-xl font-bold mt-5">Number of rooms:</h1>
+            <p className="text-[gray] text-sm font-semibold">
+              {listing?.roomCount}
+            </p>
+          </div>
+          <div className="static">
+            <h1 className="text-xl font-bold mt-5">number of bathrooms:</h1>
+            <p className="text-[gray] text-sm font-semibold">
+              {listing?.bathroomCount}
+            </p>
+          </div>
+          <div>
+            <p className="text-[gray] text-xs font-semibold mt-5">
+              Price start from
+            </p>
+            <p className="text-lg font-bold">{listing?.price} &nbsp;EGP</p>
+          </div>
+        </div>
       </div>
       {center[0] === undefined ? (
         ""

@@ -109,9 +109,6 @@ const AddApartmentForm = () => {
               </div>
               <Separator />
               <div className="flex flex-col gap-5 mt-10">
-                <h1 className="font-bold text-[#1e4164]">
-                  what are the amenities do you have?
-                </h1>
                 <div className="flex justify-between items-center text-[#1e4164]">
                   <p>Number of Rooms</p>
                   <Input
@@ -142,7 +139,7 @@ const AddApartmentForm = () => {
                     disabled={isLoading ? true : false}
                   />
                 </div>
-                <h1 className="mt-10 text-[#1e4164] font-bold">Add a photo</h1>
+                <h1 className="mt-10 text-[#1e4164] font-bold">Add images</h1>
                 <p className="opacity-60">
                   Show to the client how the place looks like
                 </p>

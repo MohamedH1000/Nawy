@@ -3,9 +3,9 @@ import React from "react";
 import L from "leaflet";
 import { MapContainer, Marker, TileLayer, useMapEvent } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import MarkerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import MarkerIcon from "leaflet/dist/images/marker-icon.png";
-import MarkerShadow from "leaflet/dist/images/marker-shadow.png";
+import MarkerIcon2x from "../../public/assets/images/marker-icon-2x.png";
+import MarkerIcon from "../../public/assets/images/marker-icon.png";
+import MarkerShadow from "../../public/assets/images/marker-shadow.png";
 
 // @ts-ignore
 delete L.Icon.Default.prototype._getIconUrl;
@@ -13,6 +13,10 @@ L.Icon.Default.mergeOptions({
   IconUrl: MarkerIcon.src,
   IconRetinaUrl: MarkerIcon2x.src,
   shadowUrl: MarkerShadow.src,
+});
+
+const Icon = L.icon({
+  iconUrl: "../../public/assets/images/marker-icon-2x.png",
 });
 
 interface MapProps {
@@ -51,6 +55,7 @@ const Map: React.FC<MapProps> = ({ setApartmentDetails, apartmentDetails }) => {
               apartmentDetails.locationValue.lat,
               apartmentDetails.locationValue.lng,
             ]}
+            icon={Icon}
           />
         )}
         <MyComponent
